@@ -80,6 +80,7 @@ This project focuses on designing a video processing pipeline to detect the four
 
 **Output**  
 An output video with the detected edges, boundaries, and corners of the paper highlighted in each frame.
+[Link to the Output Video](https://drive.google.com/file/d/1kXk8kiJp7Vsdj-XWEdOgZZ8g6iOou2XV/view?usp=sharing)
 
 
 ### Task 2: Image Stitching (Panoramic Mosaic)
@@ -112,7 +113,7 @@ This task involves creating a panoramic mosaic from four overlapping images of a
 
 **Output**  
 A panoramic image created from the four input images.
-
+![Frame with Trajectory](https://github.com/nazringr/Computer-Vision-Projects/blob/main/Project%202%3A%20Video%20Processing%20Pipeline%20and%20Image%20Stitching/task2_output.png)
 _______
 
 ## Project 3: Camera Calibration and Reprojection Error Analysis
