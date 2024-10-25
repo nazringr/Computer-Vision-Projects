@@ -33,6 +33,8 @@ This project focuses on detecting and tracking the pixel coordinates of a black 
    
 5. **Plotting the Parabolic Trajectory**
    A frame from the video (frame number 400) is captured, and the parabolic curve is plotted on it. The object’s centroid positions are also marked.
+![Frame with Trajectory](https://raw.githubusercontent.com/nazringr/Computer-Vision-Projects/main/Project%201:%20Object%20Tracking%20and%20Parabolic%20Curve%20Fitting/Frame%20with%20Trajectory.png)
+
 
 _________
 
