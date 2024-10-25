@@ -113,3 +113,44 @@ This task involves creating a panoramic mosaic from four overlapping images of a
 **Output**  
 A panoramic image created from the four input images.
 
+_______
+
+## Project 3: Camera Calibration and Reprojection Error Analysis
+
+### Task 1: Image Collection and Calibration Pipeline
+
+**Description**  
+This project involves calibrating a camera using a calibration board (chessboard or circular pattern) and analyzing reprojection errors. The objective is to collect images, detect corners or centroids, and optimize camera parameters for accurate image representation.
+
+### Key Features
+- Collection of approximately 50 images of a calibration board.
+- Utilization of OpenCV functions for camera calibration.
+- Step-by-step explanation of the calibration pipeline, including image undistortion.
+- Analysis of reprojection errors to evaluate calibration accuracy.
+- Visualization of detected corners/centroids before and after calibration.
+
+### Steps Implemented
+1. **Image Collection**:  
+   Collected around 50 images of a calibration board, which are stored in Google Drive.  
+   [Link to images](https://drive.google.com/drive/folders/194hs49UdUlIuKUsUzio2JRcmzz97ho__?usp=share_link)
+
+2. **Calibration Pipeline**:  
+   - Chose a chessboard pattern for calibration.
+   - Utilized OpenCV functions for corner detection.
+   - Provided a detailed explanation of each stage, including:
+     - Initialization of calibration parameters
+     - Image undistortion
+     - Optimization of camera intrinsic and extrinsic parameters
+   - Displayed the original image and the undistorted image.
+
+3. **Reprojection Error Analysis**:
+   Plotted the reprojection error for each image used in the calibration process.
+   Discussed the significance of reprojection error concerning calibration accuracy.
+
+4. **Visualization of Calibration Results**:
+   Drew detected corners on the original images and displayed results before and after calibration.
+   Used different colors to differentiate between original and reprojected points.
+
+### Output
+
+
