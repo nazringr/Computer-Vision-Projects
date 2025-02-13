@@ -154,12 +154,50 @@ This project involves calibrating a camera using a calibration board (chessboard
 
 ### Output
 
-- **Reprojection Error Graph**:  
    A plot showing the reprojection error for each image used in calibration, giving insights into calibration accuracy.
-![Reprojection Error](Project%203%20Camera%20Calibration%20and%20Reprojection%20Error%20Analysis/task1_error.png)
-  
-- **Original Image with Detected Corners (Left) & Undistorted Image with Detected Corners (Right)**  
 
-![Calibration Output](Project%203%20Camera%20Calibration%20and%20Reprojection%20Error%20Analysis/task1_output.png)
+<img src="https://github.com/nazringr/Computer-Vision-Projects/blob/main/Project%203%3A%20Camera%20Calibration%20and%20Reprojection%20Error%20Analysis/task1_error.png" height="300" />
+
+  
+
+![Calibration Output](https://github.com/nazringr/Computer-Vision-Projects/blob/main/Project%203%3A%20Camera%20Calibration%20and%20Reprojection%20Error%20Analysis/task1_output.png)
+
+### Task 2: Stereo Vision System
+
+**Link to the images**: [Google Drive Link](https://drive.google.com/drive/folders/1wkjEqhttgPs0nDvFVnsBeinE7ukYL2-f?usp=sharing)
+
+In this task, three datasets are provided, each containing two images of the same scene captured from different camera perspectives. Each dataset includes a `calib.txt` file detailing the camera matrices, baseline, image size, and other parameters necessary for calibration and stereo vision.
+
+### Pipeline for Creating a Stereo Vision System:
+1. **Calibration**:
+   - **a.** Identify matching features between the two images in each dataset using any feature matching algorithms.
+   - **b.** Estimate the Fundamental matrix using RANSAC method based on the matched features.
+   - **c.** Compute the Essential matrix from the Fundamental matrix considering calibration parameters.
+   - **d.** Decompose the Essential matrix into rotation and translation matrices.
+
+2. **Rectification**:
+   - **a.** Apply perspective transformation to rectify images and ensure horizontal epipolar lines.
+   - **b.** Print the homography matrices (H1 and H2) for rectification.
+   - **c.** Visualize epipolar lines and feature points on both rectified images.
+
+3. **Compute Depth Image**:
+   - **a.** Calculate the disparity map representing the pixel-wise differences between the two images.
+   - **b.** Rescale the disparity map and save it as grayscale and color images using heat map conversion.
+   - **c.** Utilize the disparity information to compute depth values for each pixel.
+   - **d.** Generate a depth image representing the spatial dimensions of the scene.
+   - **e.** Save the depth image as grayscale and color using heat map conversion for visualization.
+
+### Parameters in `calib.txt`:
+- **cam0, cam1**: Camera matrices for the rectified views, in the form `[f 0 cx; 0 f cy; 0 0 1]`
+  - `f`: focal length in pixels
+  - `cx, cy`: principal point
+  - `doffs`: x-difference of principal points, doffs = cx1 - cx0 (here always == 0)
+  - `baseline`: camera baseline in mm
+  - `width, height`: image size
+  - `ndisp`: a conservative bound on the number of disparity levels; the stereo algorithm MAY utilize this bound and search from `d = 0 .. ndisp-1`
+  - `vmin, vmax`: a tight bound on minimum and maximum disparities, used for color visualization; the stereo algorithm MAY NOT utilize this information
+
+### References:
+[1] D. Scharstein, H. Hirschmüller, Y. Kitajima, G. Krathwohl, N. Nesic, X. Wang, and P. Westling. High-resolution stereo datasets with subpixel-accurate ground truth. In *German Conference on Pattern Recognition (GCPR 2014)*, Münster, Germany, September 2014.
 
 
