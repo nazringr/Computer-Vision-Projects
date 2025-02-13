@@ -144,14 +144,22 @@ This project involves calibrating a camera using a calibration board (chessboard
      - Optimization of camera intrinsic and extrinsic parameters
    - Displayed the original image and the undistorted image.
 
-3. **Reprojection Error Analysis**:
-   Plotted the reprojection error for each image used in the calibration process.
+3. **Reprojection Error Analysis**:  
+   Plotted the reprojection error for each image used in the calibration process.  
    Discussed the significance of reprojection error concerning calibration accuracy.
 
-4. **Visualization of Calibration Results**:
-   Drew detected corners on the original images and displayed results before and after calibration.
+4. **Visualization of Calibration Results**:  
+   Drew detected corners on the original images and displayed results before and after calibration.  
    Used different colors to differentiate between original and reprojected points.
 
 ### Output
+
+- **Reprojection Error Graph**:  
+   A plot showing the reprojection error for each image used in calibration, giving insights into calibration accuracy.
+![Reprojection Error](Project%203%20Camera%20Calibration%20and%20Reprojection%20Error%20Analysis/task1_error.png)
+  
+- **Original Image with Detected Corners (Left) & Undistorted Image with Detected Corners (Right)**  
+
+![Calibration Output](Project%203%20Camera%20Calibration%20and%20Reprojection%20Error%20Analysis/task1_output.png)
 
 
